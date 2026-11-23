@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f7f5f0;
+  --surface: #ffffff;
+  --ink: #1d1b18;
+  --muted: #6b665d;
+  --line: #e4dfd4;
+  --accent: #1f5f4e;
+  --accent-ink: #ffffff;
+  --accent-soft: #e3efe9;
+  --ok: #1f7a4d;
+  --ok-soft: #e2f3e9;
+  --bad: #b3392f;
+  --bad-soft: #fbe7e4;
+  --warn: #8a5a00;
+  --warn-soft: #fbf0d9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #151412;
+    --surface: #1f1d1a;
+    --ink: #ece8e1;
+    --muted: #a39d92;
+    --line: #34312c;
+    --accent: #6fc3a6;
+    --accent-ink: #0f231d;
+    --accent-soft: #1d332c;
+    --ok: #74c99a;
+    --ok-soft: #183026;
+    --bad: #f08a80;
+    --bad-soft: #3a1f1c;
+    --warn: #e7b866;
+    --warn-soft: #352a16;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-ok: var(--ok);
+  --color-ok-soft: var(--ok-soft);
+  --color-bad: var(--bad);
+  --color-bad-soft: var(--bad-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --font-sans: var(--font-noto), system-ui, -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  word-break: keep-all;
+  -webkit-tap-highlight-color: transparent;
+}
