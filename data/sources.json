@@ -1,0 +1,252 @@
+{
+ "HM": {
+  "title": "국립국어원 한국어 어문 규범 - 한글 맞춤법 본문(문장 부호 포함)",
+  "url": "https://korean.go.kr/kornorms/regltn/regltnView.do;jsessionid=3038884522FB1BC33AC737AC93513C36",
+  "tier": "공식"
+ },
+ "PJ": {
+  "title": "표준어 규정(문교부 고시 제88-2호) 원문 - 위키문헌",
+  "url": "https://ko.wikisource.org/wiki/%EB%AC%B8%EA%B5%90%EB%B6%80_%EA%B3%A0%EC%8B%9C_%EC%A0%9C88-2%ED%98%B8",
+  "tier": "공식(원문 사본)"
+ },
+ "PJ7": {
+  "title": "한국교열기자협회 - 접두사 '수-'와 '숫-'의 구분(표준어 규정 제7항)",
+  "url": "https://www.journalist.or.kr/m/m_article.html?no=1881",
+  "tier": "전문가"
+ },
+ "SAI1": {
+  "title": "국립국어원 - '표준국어대사전'의 어문 규범: 사이시옷의 원리와 적용 방법",
+  "url": "https://www.korean.go.kr/nkview/nknews/200006/23_4.htm",
+  "tier": "공식"
+ },
+ "SAI2": {
+  "title": "국립국어원 - 한글 맞춤법의 이해: 사이시옷을 적는 방법",
+  "url": "https://www.korean.go.kr/nkview/nknews/200503/80_3.html",
+  "tier": "공식"
+ },
+ "ILCHE1": {
+  "title": "국립국어원 - 궁금증을 풀어 드립니다: 一切(일체/일절)",
+  "url": "https://www.korean.go.kr/nkview/nknews/200206/47_13.html",
+  "tier": "공식"
+ },
+ "ILCHE2": {
+  "title": "국립국어원 - 한글 맞춤법의 이해: '일체(一切)'와 '경신(更新)'",
+  "url": "https://www.korean.go.kr/nkview/nknews/200208/49_1.html",
+  "tier": "공식"
+ },
+ "N2011PDF": {
+  "title": "국립국어원 새국어생활 2011 겨울 - 복수 표준어 39항목 소개",
+  "url": "https://www.korean.go.kr/nkview/nklife/2011_4/2011_0413.pdf",
+  "tier": "공식"
+ },
+ "GILLAE": {
+  "title": "국립국어원 새국어생활 2011 겨울 - 복수 표준어 확대에 대한 각계 의견('-길래' 허용)",
+  "url": "https://www.korean.go.kr/nkview/nklife/2011_4/2011_0408.pdf",
+  "tier": "공식"
+ },
+ "NIKL_HOME": {
+  "title": "국립국어원 누리집 첫 화면 안내(이쁘다 2015, 삐지다 2014, 간지럽히다 2011, 효과[효:꽈] 2017 인정)",
+  "url": "https://www.korean.go.kr/",
+  "tier": "공식"
+ },
+ "LOAN_AD1": {
+  "title": "국립국어원 - 광고 언어의 오용 사례: 광고 언어의 외래어 표기",
+  "url": "https://www.korean.go.kr/nkview/nknews/200107/36_6.html",
+  "tier": "공식"
+ },
+ "LOAN_AD2": {
+  "title": "국립국어원 - 광고 언어의 오용 사례: 광고 언어의 외래어 표기(2)",
+  "url": "https://www.korean.go.kr/nkview/nknews/200108/37_6.html",
+  "tier": "공식"
+ },
+ "SIMSIM1": {
+  "title": "서울신문 - '심심한 사과'에 '안 심심한데?'… 트위터發 문해력 논란(2022.8.21)",
+  "url": "https://m.seoul.co.kr/news/2022/08/21/20220821500030",
+  "tier": "언론"
+ },
+ "SIMSIM2": {
+  "title": "뉴시스 - '심심한 사과' 논란, 핵심은 실질문맹률 아니다?(2022.9.3)",
+  "url": "https://www.newsis.com/view/NISX20220902_0002001066",
+  "tier": "언론"
+ },
+ "LIT2022": {
+  "title": "뉴시스 - '심심한 사과' 문해력 논란…(사흘·금일 사례 포함, 2022.10.9)",
+  "url": "https://www.newsis.com/view/NISX20221008_0002041845",
+  "tier": "언론"
+ },
+ "MUUN1": {
+  "title": "다음뉴스(조선일보) - '무운을 빈다'.. 이게 뭔 소리? 검색창이 난리 났다(2021.11.11)",
+  "url": "https://v.daum.net/v/20211111035411024",
+  "tier": "언론"
+ },
+ "MUUN2": {
+  "title": "다음뉴스(조선일보) - 2040 절반 한자 장벽…(무운·명징 논란 언급, 2021.11.13)",
+  "url": "https://v.daum.net/v/20211113030203514",
+  "tier": "언론"
+ },
+ "NYEONPAE": {
+  "title": "아시아경제 - 한자어 낯선 한국인들 갈수록 늘어(무운·n연패 사례, 2021.11.12)",
+  "url": "https://view.asiae.co.kr/article/2021111213502200895",
+  "tier": "언론"
+ },
+ "ZERO1": {
+  "title": "서울신문(트윅) - '모집인원 ○명' 유튜브 공고글 두고 또 '문해력 논란'(2024.4.16)",
+  "url": "https://www.twig24.com/news/world/2024/04/16/20240416500096",
+  "tier": "언론"
+ },
+ "ZERO2": {
+  "title": "YTN - 너덜트 배우 모집 '0명' 표기 논란(2024.4.16)",
+  "url": "https://www.ytn.co.kr/_ln/0103_202404160957506189",
+  "tier": "언론"
+ },
+ "UCHEON": {
+  "title": "파이낸셜뉴스 - 어린이집 교사 '우천시가 지역인 줄 알더라' 토로(2024.7.1)",
+  "url": "https://www.fnnews.com/news/202407011922171354",
+  "tier": "언론"
+ },
+ "GEUMJU": {
+  "title": "헤럴드경제 - 알림장 '금주 행사'에…학부모 '애들이 술 마시나' 항의(2025.7.28)",
+  "url": "https://www.heraldk.com/article/2025072817465792636",
+  "tier": "언론"
+ },
+ "TEACH26": {
+  "title": "파이낸셜뉴스(뉴스1) - '금일=금요일·우천시=도시?'…교사 96% '학생 문해력 떨어졌다'(2026.10.8)",
+  "url": "https://www.fnnews.com/news/202610081036488167",
+  "tier": "언론"
+ },
+ "INSIGHT26": {
+  "title": "인사이트 - 한글날 앞두고 공개된 학생 문해력 실태(고소공포증·고지식 사례, 2026.10)",
+  "url": "https://www.insight.co.kr/news/577039",
+  "tier": "언론"
+ },
+ "KBMAEIL": {
+  "title": "경북매일 칼럼 - 문해력, 책 읽는 사회가 되어야(이부자리·추후 공고·고지식 사례, 2025.7.28)",
+  "url": "https://kbmaeil.com/article/20250726500018",
+  "tier": "언론(칼럼)"
+ },
+ "JJAJANG": {
+  "title": "경남신문 - '짜장면' 등 39개 표준어 인정(2011.8.31)",
+  "url": "https://knnews.co.kr/news/articleView.php?idxno=997771",
+  "tier": "언론"
+ },
+ "JJAJANG2": {
+  "title": "생글생글(한국경제) - 25년 만에 이름 되찾은 '짜장면'(2011.9)",
+  "url": "https://sgsg.hankyung.com/article/2011090806261",
+  "tier": "언론"
+ },
+ "NEW2014": {
+  "title": "머니투데이 - '삐지다? 삐치다?' 이제는 둘다 표준어…13개 어휘(2014.12.15)",
+  "url": "https://www.mt.co.kr/society/2014/12/15/2014121513150267874",
+  "tier": "언론"
+ },
+ "NEW2015": {
+  "title": "경북매일 - 잎새·푸르르다·이쁘다 등 표준어 인정(2015.12.15)",
+  "url": "https://www.kbmaeil.com/article/201512150148516",
+  "tier": "언론"
+ },
+ "NEW2011B": {
+  "title": "시대일보 - 2011년 8월31일 국립국어원 짜장면 표준어 인정(복숭아뼈·먹거리 등)",
+  "url": "https://www.sidae.com/article/2025082820364089108",
+  "tier": "언론"
+ },
+ "NEOMU": {
+  "title": "매일신문 [민송기의 우리말 이야기] 너무 좋다(2015.8.10)",
+  "url": "https://www.imaeil.com/page/view/2015081001495807939",
+  "tier": "언론"
+ },
+ "ILHAERA": {
+  "title": "텐아시아 - '일해라 절해라'(이래라저래라의 오타에서 비롯된 표현, 2020.1)",
+  "url": "https://www.tenasia.co.kr/article/2020012340754",
+  "tier": "언론"
+ },
+ "JOBK": {
+  "title": "브라보마이라이프(이투데이) - 잡코리아·알바몬 맞춤법 설문(금새·몇일·어의없다 등)",
+  "url": "https://bravo.etoday.co.kr/view/atc_view/7893",
+  "tier": "언론"
+ },
+ "WIKITREE50": {
+  "title": "위키트리 - '모르면 독' 틀리기 쉬운 맞춤법 50선",
+  "url": "https://www.wikitree.co.kr/articles/189240",
+  "tier": "언론"
+ },
+ "BOEYO": {
+  "title": "잡플래닛 - '뵈요 쓰면 외않되?' 맞춤법 이것만은 제발(2023.4.18)",
+  "url": "https://www.jobplanet.co.kr/contents/news-4532",
+  "tier": "기업 콘텐츠"
+ },
+ "GYEOLJAE": {
+  "title": "잡플래닛 - 기안 '결제' 부탁드립니다…'돈주고 맡기게요?'",
+  "url": "https://www.jobplanet.co.kr/contents/news-4459",
+  "tier": "기업 콘텐츠"
+ },
+ "SEGYE": {
+  "title": "세계일보 - 국립국어원 2015년 주요 질문 20선(못하다/못 하다, 한번/한 번)",
+  "url": "https://www.segye.com/newsView/20160826001460",
+  "tier": "언론"
+ },
+ "SISAIN26": {
+  "title": "다음뉴스(시사IN) - 국립국어원 10년 차 상담 연구원 인터뷰(사이시옷 '뜨거운 감자', 2026.5.7)",
+  "url": "https://v.daum.net/v/20260507063421058",
+  "tier": "언론"
+ },
+ "WITHNEWS": {
+  "title": "위드뉴스 - '모집공고 0명, 낚시 공고냐?'…(설왕설래 등 사례)",
+  "url": "https://car.withnews.kr/society/mz-generation-literacy",
+  "tier": "언론"
+ },
+ "MJ_CLIEN": {
+  "title": "클리앙 - 이동진 기생충 한줄평 논란 토론 글(2019.6)",
+  "url": "https://www.clien.net/service/board/park/13555500",
+  "tier": "커뮤니티"
+ },
+ "GONYOK": {
+  "title": "생글생글(한국경제) - '곤혹'스러운 일을 겪는 게 '곤욕'",
+  "url": "https://sgsg.hankyung.com/article/2009010813811",
+  "tier": "언론"
+ },
+ "TASAN1": {
+  "title": "생글생글(한국경제) - '타산지석'과 '귀감'의 차이",
+  "url": "https://sgsg.hankyung.com/article/2011021781991",
+  "tier": "언론"
+ },
+ "TASAN2": {
+  "title": "한국기자협회 [엄민용의 우리말글 산책] 옥석구분을 잘하면 큰일 난다",
+  "url": "https://www.journalist.or.kr/m/m_article.html?no=25684",
+  "tier": "전문가"
+ },
+ "BANJEUNG1": {
+  "title": "미주중앙일보 [우리말 바루기] '반증', '방증'",
+  "url": "https://www.koreadaily.com/article/20230206191046931",
+  "tier": "언론"
+ },
+ "BANJEUNG2": {
+  "title": "다음뉴스(연합뉴스) [이런말저런글] 반증은 뒤집는 증거",
+  "url": "https://v.daum.net/v/20250805055643305",
+  "tier": "언론"
+ },
+ "GEUMDO": {
+  "title": "미주중앙일보 [우리말 바루기] 국어사전에 없는 '금도'(2026.10.13)",
+  "url": "https://www.koreadaily.com/article/20261013200439255",
+  "tier": "언론"
+ },
+ "EURE": {
+  "title": "생글생글(한국경제) - '으레'의 정체는 고유어 같은 한자어(2026.3)",
+  "url": "https://sgsg.hankyung.com/article/2026031386501",
+  "tier": "언론"
+ },
+ "ILCHE3": {
+  "title": "다음뉴스(연합뉴스) [이런말저런글] '일체의 명사', 더 나은 표현 없을까요",
+  "url": "https://v.daum.net/v/20250811055617326",
+  "tier": "언론"
+ },
+ "LOAN_SG": {
+  "title": "생글생글(한국경제) - 틀리기 쉬운 외래어 표기(카디건·리더십·액세서리·초콜릿 등)",
+  "url": "https://sgsg.hankyung.com/article/2013051669081",
+  "tier": "교육 자료"
+ },
+ "LOAN_TIL": {
+  "title": "tilnote - 외래어 표기 정리(카페라테·메시지·비즈니스 등, 개인 블로그)",
+  "url": "https://tilnote.io/books/6a20ff0c6fcb632b0c22739c/6a2101046fcb632b0c228841",
+  "tier": "블로그(보조)"
+ }
+}
