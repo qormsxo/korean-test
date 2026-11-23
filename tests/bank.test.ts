@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { bank, getRawQuestion, OPTION_KEYS, toDomain } from "@/lib/bank";
 import { EXPLANATION_NOTES, INTERNAL_CAUTIONS } from "@/lib/notes";
 import { getCurrentSetQuestions } from "@/lib/quiz";
+import { QUESTION_VOICE } from "@/lib/questionVoice";
 import { domainTotals } from "@/lib/setMeta";
 import { CURRENT_SET } from "@/lib/sets";
 
@@ -30,11 +31,18 @@ describe("출제 세트 v1", () => {
     expect(domainTotals()).toEqual({ 어휘력: 8, 표기: 7, 문해력: 3, 띄어쓰기: 2 });
   });
 
-  it("문항 내용은 JSON 원문과 글자 하나까지 같다", () => {
+  it("말투를 바꾼 질문은 원문이 바뀌지 않았을 때만 적용된다", () => {
+    // JSON 원문이 바뀌면 바꾼 말투가 낡은 뜻을 담을 수 있으므로 다시 검토하게 한다.
+    for (const [id, v] of Object.entries(QUESTION_VOICE)) {
+      expect(getRawQuestion(id).question, `${id} 원문 질문이 바뀜 → questionVoice.ts 재검토`).toBe(v.original);
+    }
+  });
+
+  it("질문 말투 외의 문항 내용(context·선택지·정답·해설)은 JSON 원문과 글자 하나까지 같다", () => {
     for (const q of getCurrentSetQuestions()) {
       const raw = getRawQuestion(q.id);
       expect(q.context).toBe(raw.context);
-      expect(q.question).toBe(raw.question);
+      expect(q.question).toBe(QUESTION_VOICE[q.id]?.voice ?? raw.question);
       expect(q.answer).toBe(raw.answer);
       expect(q.whyCorrect).toBe(raw.why_correct);
       expect(q.whyWrong).toBe(raw.why_wrong);
