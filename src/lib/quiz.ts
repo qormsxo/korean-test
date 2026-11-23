@@ -1,5 +1,5 @@
 // 화면에 내려보낼 문항 형태. 서버 컴포넌트에서만 만들고 클라이언트에는 출제 세트 20문항만 전달한다.
-import { displayBasis, getRawQuestion, OPTION_KEYS, toDomain, type Domain, type OptionKey } from "./bank";
+import { getRawQuestion, OPTION_KEYS, toDomain, type Domain, type OptionKey } from "./bank";
 import { EXPLANATION_NOTES, type ExplanationNote } from "./notes";
 import { CURRENT_SET } from "./sets";
 
@@ -14,7 +14,6 @@ export type QuizQuestion = {
   answer: OptionKey;
   whyCorrect: string;
   whyWrong: string;
-  basis: string;
   moderateCertainty: boolean;
   notes: ExplanationNote[];
 };
@@ -32,7 +31,6 @@ export function toQuizQuestion(id: string): QuizQuestion {
     answer: q.answer as OptionKey,
     whyCorrect: q.why_correct,
     whyWrong: q.why_wrong,
-    basis: displayBasis(q.basis),
     moderateCertainty: q.certainty === "보통",
     notes: EXPLANATION_NOTES[q.id] ?? [],
   };

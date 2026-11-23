@@ -63,10 +63,3 @@ export function getRawQuestion(id: string): RawQuestion {
   return q;
 }
 
-/**
- * 화면에 보여 줄 근거. basis에 ' | ' 뒤로 붙은 출제자용 검증 메모
- * (예: "개별 표제어 URL은 ... 재확인")는 사용자에게 보이지 않게 앞부분만 쓴다.
- */
-export function displayBasis(basis: string): string {
-  return basis.split(" | ")[0].trim();
-}
