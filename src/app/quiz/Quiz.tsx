@@ -6,6 +6,7 @@ import { Explanation } from "@/components/Explanation";
 import type { OptionKey } from "@/lib/bank";
 import { loadRun, nowMs, saveRun, sendEvent, type RunState } from "@/lib/clientState";
 import type { QuizQuestion } from "@/lib/quiz";
+import { resultCode } from "@/lib/resultTypes";
 import { decideResultType, scoreAnswers } from "@/lib/scoring";
 
 const MID_AD_AFTER = 10; // 10번 문항 해설 아래에 광고
@@ -52,8 +53,10 @@ export function Quiz({ questions, setId, normChangedIds }: Props) {
   function next() {
     if (!run) return;
     if (isLast) {
-      // 결과는 유형만 보여 준다(점수는 화면에 내지 않고, 유형 판정과 로그에만 쓴다).
-      const code = decideResultType(scoreAnswers(questions, run.answers), normChangedIds);
+      // 유형은 답으로만 정한다(점수는 화면에 내지 않고, 판정과 로그에만 쓴다).
+      // 연령대는 결과 화면의 '또래 버전' 문구를 고르는 데만 URL에 붙는다.
+      const type = decideResultType(scoreAnswers(questions, run.answers), normChangedIds);
+      const code = resultCode(type, run.ageGroup);
       update({ ...run, shareCode: code });
       sendEvent({ type: "finish", sessionId: run.sessionId, setId, answers: run.answers });
       router.push(`/r/${code}`);
