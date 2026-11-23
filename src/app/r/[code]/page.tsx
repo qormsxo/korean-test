@@ -20,9 +20,9 @@ export const instant = false;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { code } = await params;
-  if (!isResultTypeKey(code)) return { title: "한국어 능력 테스트" };
+  if (!isResultTypeKey(code)) return { title: "내 한국어 실력 유형 테스트" };
   const t = RESULT_TYPES[code];
-  const title = `나의 한국어 유형은 '${t.name}' | 한국어 능력 테스트`;
+  const title = `나의 한국어 유형은 '${t.name}' | 내 한국어 실력 유형 테스트`;
   return { title, description: t.headline, openGraph: { title, description: t.headline } };
 }
 

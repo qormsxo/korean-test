@@ -10,9 +10,9 @@ const adClient = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "한국어 능력 테스트 — 사흘은 며칠일까?",
-  description: "20문항으로 알아보는 나의 어휘력·표기·띄어쓰기·문해력. 문항마다 정답과 해설을 바로 확인하세요.",
-  openGraph: { type: "website", locale: "ko_KR", siteName: "한국어 능력 테스트" },
+  title: "내 한국어 실력 유형 테스트 — 사흘은 며칠일까?",
+  description: "20개 질문으로 알아보는 나의 한국어 습관 유형. 나는 사전파일까, 감각파일까?",
+  openGraph: { type: "website", locale: "ko_KR", siteName: "내 한국어 실력 유형 테스트" },
 };
 
 export const viewport: Viewport = {

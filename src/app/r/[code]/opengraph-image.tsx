@@ -2,7 +2,7 @@
 import { ImageResponse } from "next/og";
 import { isResultTypeKey, RESULT_TYPE_KEYS, RESULT_TYPES } from "@/lib/resultTypes";
 
-export const alt = "한국어 능력 테스트 결과 카드";
+export const alt = "내 한국어 실력 유형 테스트 결과 카드";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -29,7 +29,7 @@ export default async function Image({ params }: { params: Promise<{ code: string
   const { code } = await params;
   const t = isResultTypeKey(code) ? RESULT_TYPES[code] : null;
 
-  const text = `${t ? t.name + t.headline : ""}한국어 능력 테스트나의 한국어 유형은나도 해 보기`;
+  const text = `${t ? t.name + t.headline : ""}내 한국어 실력 유형 테스트나의 한국어 유형은나도 해 보기`;
   const [bold, regular] = await Promise.all([loadFont(text, 900), loadFont(text, 500)]);
   const fonts = [
     ...(bold ? [{ name: "Noto", data: bold, weight: 900 as const, style: "normal" as const }] : []),
@@ -50,7 +50,7 @@ export default async function Image({ params }: { params: Promise<{ code: string
           fontFamily: "Noto",
         }}
       >
-        <div style={{ display: "flex", fontSize: 30, fontWeight: 500, color: "#1f5f4e" }}>한국어 능력 테스트</div>
+        <div style={{ display: "flex", fontSize: 30, fontWeight: 500, color: "#1f5f4e" }}>내 한국어 실력 유형 테스트</div>
         <div style={{ display: "flex", flexDirection: "column", flex: 1, justifyContent: "center" }}>
           {t ? (
             <div style={{ display: "flex", flexDirection: "column" }}>
@@ -71,7 +71,7 @@ export default async function Image({ params }: { params: Promise<{ code: string
               <div style={{ display: "flex", fontSize: 40, fontWeight: 500, marginTop: 24 }}>{t.headline}</div>
             </div>
           ) : (
-            <div style={{ display: "flex", fontSize: 80, fontWeight: 900 }}>한국어 능력 테스트</div>
+            <div style={{ display: "flex", fontSize: 72, fontWeight: 900 }}>내 한국어 실력 유형 테스트</div>
           )}
         </div>
         <div style={{ display: "flex", justifyContent: "flex-end", fontSize: 26, fontWeight: 500, color: "#6b665d" }}>
