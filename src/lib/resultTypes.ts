@@ -53,7 +53,7 @@ export const RESULT_TYPES: Record<ResultTypeKey, ResultTypeInfo> = {
     emoji: "🌱",
     headline: "해설을 읽을수록 오르는 타입",
     description:
-      "특정 영역에 치우치지 않고 고르게 맞히고 고르게 틀렸어요. 오늘 본 해설만 다시 훑어봐도 다음 점수가 확 달라질 거예요.",
+      "특정 영역에 치우치지 않고 고르게 맞히고 고르게 틀렸어요. 오늘 본 해설만 다시 훑어봐도 다음 결과가 확 달라질 거예요.",
   },
 };
 

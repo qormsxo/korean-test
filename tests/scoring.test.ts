@@ -1,8 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { getRawQuestion, type OptionKey } from "@/lib/bank";
 import { decideResultType, scoreAnswers, type Answers } from "@/lib/scoring";
-import { decodeShareCode, encodeShareCode } from "@/lib/shareCode";
-import { domainTotals, scoringItems } from "@/lib/setMeta";
+import { scoringItems } from "@/lib/setMeta";
 import { CURRENT_SET } from "@/lib/sets";
 
 const ids = CURRENT_SET.questionIds;
@@ -72,21 +71,5 @@ describe("결과 유형", () => {
 
   it("아무 조건에도 해당하지 않으면 기본 유형", () => {
     expect(typeOf({})).toBe("grower");
-  });
-});
-
-describe("공유 코드", () => {
-  it("인코딩 → 디코딩이 왕복된다", () => {
-    const s = scoreAnswers(items, answersWrongOn(["A02"]));
-    const code = encodeShareCode("guardian", s);
-    expect(code).toBe("guardian-7732");
-    const r = decodeShareCode(code, domainTotals());
-    expect(r?.total).toBe(19);
-    expect(r?.max).toBe(20);
-  });
-  it("범위 밖 점수나 모르는 유형은 거부", () => {
-    expect(decodeShareCode("guardian-9732", domainTotals())).toBeNull();
-    expect(decodeShareCode("hacker-1111", domainTotals())).toBeNull();
-    expect(decodeShareCode("guardian-77", domainTotals())).toBeNull();
   });
 });

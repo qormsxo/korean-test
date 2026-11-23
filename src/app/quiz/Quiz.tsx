@@ -7,7 +7,6 @@ import type { OptionKey } from "@/lib/bank";
 import { loadRun, nowMs, saveRun, sendEvent, type RunState } from "@/lib/clientState";
 import type { QuizQuestion } from "@/lib/quiz";
 import { decideResultType, scoreAnswers } from "@/lib/scoring";
-import { encodeShareCode } from "@/lib/shareCode";
 
 const MID_AD_AFTER = 10; // 10번 문항 해설 아래에 광고
 
@@ -53,8 +52,8 @@ export function Quiz({ questions, setId, normChangedIds }: Props) {
   function next() {
     if (!run) return;
     if (isLast) {
-      const summary = scoreAnswers(questions, run.answers);
-      const code = encodeShareCode(decideResultType(summary, normChangedIds), summary);
+      // 결과는 유형만 보여 준다(점수는 화면에 내지 않고, 유형 판정과 로그에만 쓴다).
+      const code = decideResultType(scoreAnswers(questions, run.answers), normChangedIds);
       update({ ...run, shareCode: code });
       sendEvent({ type: "finish", sessionId: run.sessionId, setId, answers: run.answers });
       router.push(`/r/${code}`);
