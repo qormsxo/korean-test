@@ -1,18 +1,40 @@
 import type { Metadata, Viewport } from "next";
 import { Noto_Sans_KR } from "next/font/google";
 import Script from "next/script";
+import { SITE_DESCRIPTION, SITE_KEYWORDS, SITE_NAME, SITE_TITLE, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const noto = Noto_Sans_KR({ variable: "--font-noto", weight: ["400", "500", "700", "900"], preload: false });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 const adClient = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
 
+// 검색엔진 소유 확인 코드(Google Search Console, 네이버 서치어드바이저). 값이 있을 때만 태그가 나간다.
+const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
+const naverVerification = process.env.NEXT_PUBLIC_NAVER_SITE_VERIFICATION;
+
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: "내 한국어 실력 유형 테스트 — 사흘은 며칠일까?",
-  description: "20개 질문으로 알아보는 나의 한국어 습관 유형. 나는 사전파일까, 감각파일까?",
-  openGraph: { type: "website", locale: "ko_KR", siteName: "내 한국어 실력 유형 테스트" },
+  metadataBase: new URL(SITE_URL),
+  title: { default: SITE_TITLE, template: `%s | ${SITE_NAME}` },
+  description: SITE_DESCRIPTION,
+  keywords: SITE_KEYWORDS,
+  applicationName: SITE_NAME,
+  category: "education",
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    locale: "ko_KR",
+    siteName: SITE_NAME,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: "/",
+  },
+  twitter: { card: "summary_large_image", title: SITE_TITLE, description: SITE_DESCRIPTION },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large" } },
+  formatDetection: { telephone: false },
+  verification: {
+    ...(googleVerification ? { google: googleVerification } : {}),
+    ...(naverVerification ? { other: { "naver-site-verification": naverVerification } } : {}),
+  },
 };
 
 export const viewport: Viewport = {

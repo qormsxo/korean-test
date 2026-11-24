@@ -25,11 +25,19 @@ const ageLabel = (key: string) => AGE_GROUPS.find((a) => a.key === key)?.label ?
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { code } = await params;
   const r = parseResultCode(code);
-  if (!r) return { title: "내 한국어 실력 유형 테스트" };
+  if (!r) return {};
   const t = RESULT_TYPES[r.type];
   const flavor = r.age ? ` (${ageLabel(r.age)} ${t.ages[r.age].title})` : "";
-  const title = `나의 한국어 유형은 '${t.name}'${flavor} | 내 한국어 실력 유형 테스트`;
-  return { title, description: t.headline, openGraph: { title, description: t.headline } };
+  const title = `${t.name}${flavor} — 한국어 유형 결과`;
+  const description = `${t.headline}. ${t.description}`;
+  return {
+    title,
+    description,
+    // 연령대 버전(/r/classic-30s)은 기본 유형 페이지(/r/classic)를 대표 주소로 삼아 중복 색인을 막는다.
+    alternates: { canonical: `/r/${r.type}` },
+    openGraph: { title: `나의 한국어 유형은 '${t.name}'${flavor}`, description: t.headline, url: `/r/${code}` },
+    twitter: { card: "summary_large_image", title: `나의 한국어 유형은 '${t.name}'${flavor}`, description: t.headline },
+  };
 }
 
 export default async function ResultPage({ params }: Props) {

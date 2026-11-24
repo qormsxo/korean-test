@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { AgePicker } from "./AgePicker";
 import { CURRENT_SET } from "@/lib/sets";
 
-export const metadata: Metadata = { title: "연령대 선택 — 내 한국어 실력 유형 테스트" };
+export const metadata: Metadata = { title: "연령대 선택", robots: { index: false, follow: true } };
 
 export default function StartPage() {
   return (
