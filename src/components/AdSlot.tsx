@@ -1,5 +1,5 @@
 "use client";
-// 광고 자리. NEXT_PUBLIC_ADSENSE_CLIENT 와 슬롯 ID 가 없으면 자리 표시만 보인다.
+// 광고 자리. NEXT_PUBLIC_ADSENSE_CLIENT 와 슬롯 ID 가 있을 때만 나타난다.
 // 높이를 미리 잡아 두어 광고가 늦게 떠도 화면이 밀리지 않게 한다.
 import { useEffect, useRef } from "react";
 
@@ -26,22 +26,19 @@ export function AdSlot({ placement }: { placement: AdPlacement }) {
     }
   }, [slot]);
 
+  // 광고 설정이 없으면 자리 자체를 그리지 않는다(빈 칸·'광고 영역' 표시 없음).
+  if (!client || !slot) return null;
+
   return (
     <aside aria-label="광고" className="my-6 min-h-[100px] w-full">
-      {client && slot ? (
-        <ins
-          className="adsbygoogle block"
-          style={{ display: "block", minHeight: 100 }}
-          data-ad-client={client}
-          data-ad-slot={slot}
-          data-ad-format="auto"
-          data-full-width-responsive="true"
-        />
-      ) : (
-        <div className="flex h-[100px] items-center justify-center rounded-xl border border-dashed border-line text-xs text-muted">
-          광고 영역 · {placement}
-        </div>
-      )}
+      <ins
+        className="adsbygoogle block"
+        style={{ display: "block", minHeight: 100 }}
+        data-ad-client={client}
+        data-ad-slot={slot}
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      />
     </aside>
   );
 }
