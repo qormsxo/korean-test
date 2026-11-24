@@ -1,6 +1,7 @@
 // 공유 카드 1200×630. 유형(+또래 버전 별명)만 보여 준다. 점수는 넣지 않는다.
 import { ImageResponse } from "next/og";
 import { AGE_GROUPS } from "@/lib/ageGroups";
+import { koreanFonts } from "@/lib/ogFont";
 import { allResultCodes, parseResultCode, RESULT_TYPES } from "@/lib/resultTypes";
 
 export const alt = "내 한국어 실력 유형 테스트 결과 카드";
@@ -11,21 +12,6 @@ export function generateStaticParams() {
   return allResultCodes().map((code) => ({ code }));
 }
 
-/** 카드에 쓰인 글자만 담은 Noto Sans KR 서브셋을 Google Fonts에서 받는다(TTF). */
-async function loadFont(text: string, weight: number): Promise<ArrayBuffer | null> {
-  try {
-    const css = await (
-      await fetch(
-        `https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@${weight}&text=${encodeURIComponent(text)}`,
-      )
-    ).text();
-    const src = css.match(/src: url\((.+?)\) format\('(opentype|truetype)'\)/)?.[1];
-    return src ? await (await fetch(src)).arrayBuffer() : null;
-  } catch {
-    return null;
-  }
-}
-
 export default async function Image({ params }: { params: Promise<{ code: string }> }) {
   const { code } = await params;
   const r = parseResultCode(code);
@@ -34,11 +20,7 @@ export default async function Image({ params }: { params: Promise<{ code: string
     r?.age && t ? `${AGE_GROUPS.find((a) => a.key === r.age)?.label} 버전 · ${t.ages[r.age].title}` : null;
 
   const text = `${t ? t.name + t.headline : ""}${flavor ?? ""}내 한국어 실력 유형 테스트나의 한국어 유형은나도 해 보기`;
-  const [bold, regular] = await Promise.all([loadFont(text, 900), loadFont(text, 500)]);
-  const fonts = [
-    ...(bold ? [{ name: "Noto", data: bold, weight: 900 as const, style: "normal" as const }] : []),
-    ...(regular ? [{ name: "Noto", data: regular, weight: 500 as const, style: "normal" as const }] : []),
-  ];
+  const fonts = await koreanFonts(text);
 
   return new ImageResponse(
     (
